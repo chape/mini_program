@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view>
+  <view class="swiper">
+    <swiper indicator-dots="{{true}}"
+  autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item class>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view>
+     <block wx:for="{{customers}}">
+          <text class="customer-item">{{item.name}}</text>
+      </block>
+  </view>
+</view>
